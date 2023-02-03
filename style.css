@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -22,10 +24,9 @@ body {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: auto 1fr 70px;
     min-height: 100vh; 
-}
-
-body > * {
-    border: 1px solid #000;
+    background-color: var(--primary-bg-dark);
+    color: var(--text-light);
+    font-family: Roboto;
 }
 
 header {
@@ -36,6 +37,47 @@ header {
 aside {
     grid-column: 1;
     grid-row: 1 / 4;
+    padding: 30px 20px 0 30px;
+    background-color: var(--primary-bg-light);
+}
+
+.nav {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--text-grayish);
+}
+
+.nav:hover {
+    cursor: pointer;
+}
+
+.nav svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 1.5rem;
+}
+
+.nav:first-child {
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--text-light);
+}
+
+.nav:first-child svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
+}
+
+.nav:nth-child(7) svg,
+.nav:nth-child(6) svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 1.8rem;
 }
 
 main {
@@ -45,9 +87,9 @@ main {
     grid-template-columns: 5fr 2fr;
 }
 
-main > * {
+/* main > * {
     border: 1px solid #000;
-}
+} */
 
 footer {
     grid-column: 2;

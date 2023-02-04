@@ -42,15 +42,15 @@ aside {
 }
 
 .nav {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 6px;
     display: flex;
     justify-content: start;
     align-items: center;
     color: var(--text-grayish);
-}
-
-.nav:hover {
-    cursor: pointer;
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s linear;
 }
 
 .nav svg {
@@ -78,6 +78,19 @@ aside {
     width: 20px;
     height: 20px;
     margin-right: 1.8rem;
+}
+
+/* .nav::after {
+    content: "";
+    border-bottom: 3px solid black;
+    display: block;
+    width: 10px;
+} */
+
+.nav:hover {
+    border-bottom: 2px solid var(--secondary-b);
+    opacity: 1;
+    cursor: pointer;
 }
 
 main {

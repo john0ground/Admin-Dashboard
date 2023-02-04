@@ -34,6 +34,26 @@ header {
     grid-row: 1;   
 }
 
+header > * {
+    border: 1px solid white;
+}
+
+#search-icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--text-grayish);
+}
+
+#notification-circle-left {
+    width: 25px;
+    height: 25px;
+}
+
+#github-icon {
+    width: 25px;
+    height: 25px;
+}
+
 aside {
     grid-column: 1;
     grid-row: 1 / 4;
@@ -87,10 +107,9 @@ aside {
     width: 10px;
 } */
 
-.nav:hover {
+.nav:hover:not(:first-child) {
     border-bottom: 2px solid var(--secondary-b);
     opacity: 1;
-    cursor: pointer;
 }
 
 main {
@@ -107,4 +126,9 @@ main {
 footer {
     grid-column: 2;
     grid-row: 3;
+}
+
+/* hover pointer */
+.nav:hover {
+    cursor: pointer;
 }

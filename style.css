@@ -27,31 +27,118 @@ body {
     background-color: var(--primary-bg-dark);
     color: var(--text-light);
     font-family: Roboto;
+    font-size: 1rem;
 }
 
 header {
+    padding: 20px 70px 20px 30px;
     grid-column: 2;
     grid-row: 1;   
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+    background: linear-gradient(var(--primary-bg-dark), var(--primary-bg-light));
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.24);
 }
 
-header > * {
-    border: 1px solid white;
+.search-bar form{
+    display: flex;
+    align-items: center;
 }
 
 #search-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     fill: var(--text-grayish);
+    margin-right: 15px;
 }
 
-#notification-circle-left {
-    width: 25px;
-    height: 25px;
+.search-bar input {
+    height: 35px;
+    width: clamp(100px, 90%, 700px);
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #304e68;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    color: var(--text-light);
 }
 
+.search-bar input:focus {
+    outline: none;
+    border: 2px solid var(--secondary-b);
+    transition: border linear 0.3s;
+}
+
+input::-webkit-input-placeholder { 
+    color: var(--text-grayish);
+    opacity: 0.7;
+    font-family: roboto;
+}
+
+.user-info {
+    justify-self: right;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+#notification-circle-left,
 #github-icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.user-name {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.user-name .profile-image {
+    width: 70px;
+    height: 70px;
+    background-image: url(images/user-profile.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+}
+
+.user-name > p:first-of-type {
+    font-size: 0.9rem;
+}
+
+.user-name > p:nth-of-type(2) {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    align-self: flex-start;
+}
+
+.header-buttons {
+    align-self: center;
+    justify-self: right;
+    display: flex;
+}
+
+.header-btn {
+    padding: 6px 25px;
+    border-radius: 60px;
+    border: none;
+    background: var(--secondary-light);
+    color: var(--primary-main);
+    font-weight: bold;
+    font-family: roboto;
+    letter-spacing: 1px;
+}
+
+.header-btn {
+    margin-left: 40px;
 }
 
 aside {
@@ -100,13 +187,6 @@ aside {
     margin-right: 1.8rem;
 }
 
-/* .nav::after {
-    content: "";
-    border-bottom: 3px solid black;
-    display: block;
-    width: 10px;
-} */
-
 .nav:hover:not(:first-child) {
     border-bottom: 2px solid var(--secondary-b);
     opacity: 1;
@@ -119,16 +199,16 @@ main {
     grid-template-columns: 5fr 2fr;
 }
 
-/* main > * {
-    border: 1px solid #000;
-} */
-
 footer {
     grid-column: 2;
     grid-row: 3;
 }
 
 /* hover pointer */
-.nav:hover {
+.nav,
+#search-icon,
+#notification-circle-left,
+#github-icon,
+.header-btn:hover {
     cursor: pointer;
 }

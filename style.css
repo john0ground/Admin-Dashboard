@@ -199,6 +199,46 @@ main {
     grid-template-columns: 5fr 2fr;
 }
 
+main > * {
+    border: 1px solid #000;
+}
+
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-container {
+    border: 1px solid #000;
+    width: 300px;
+}
+
+.project {
+    padding: 15px;
+    background-color: var(--primary-main);
+}
+
+.project-icon {
+    width: 20px;
+    height: 20px;
+    fill: #BFC3CA;
+}
+
+.project img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.preview-icon, .source-code-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.preview-icon:hover {
+    fill: red;
+}
+
+
 footer {
     grid-column: 2;
     grid-row: 3;

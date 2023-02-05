@@ -210,7 +210,7 @@ main > * {
 
 .project-container {
     border: 1px solid #000;
-    width: 300px;
+    width: auto;
 }
 
 .project {
@@ -219,8 +219,8 @@ main > * {
 }
 
 .project-icon {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     fill: #BFC3CA;
 }
 
@@ -229,15 +229,23 @@ main > * {
     object-fit: cover;
 }
 
-.preview-icon, .source-code-icon {
+.description > a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+.preview a {
+    display: inline-block;
     width: 35px;
     height: 35px;
 }
 
-.preview-icon:hover {
-    fill: red;
+.preview-icon, .source-code-icon {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
-
 
 footer {
     grid-column: 2;

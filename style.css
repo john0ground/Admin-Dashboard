@@ -419,6 +419,23 @@ p.anc-details {
 footer {
     grid-column: 2;
     grid-row: 3;
+    background-color: var(--primary-main);
+    height: 50px;
+    align-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--secondary-light);
+}
+
+footer p {
+    color: var(--text-grayish);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 /* hover pointer */

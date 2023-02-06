@@ -389,8 +389,13 @@ p.anc-details {
     grid-row: span 2;
     width: 50px;
     height: 50px;
-    background-color: #0D9488;
     border-radius: 50%;
+}
+
+.trending-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .trending-user p:first-of-type {

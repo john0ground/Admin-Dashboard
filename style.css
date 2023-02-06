@@ -43,6 +43,12 @@ header {
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.24);
 }
 
+header.sticky {
+    position: sticky;
+    top: -60px;
+    z-index: 1;
+}
+
 .search-bar form{
     display: flex;
     align-items: center;
@@ -159,6 +165,7 @@ aside {
     grid-row: 1 / 4;
     padding: 30px 20px 0 30px;
     background-color: var(--primary-bg-light);
+    z-index: 2;
 }
 
 .nav {

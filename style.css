@@ -323,9 +323,46 @@ main > * {
     stroke: var(--secondary-a);
 }
 
-/* .side-content {
-    margin-top: 60px;
-} */
+.side-content {
+    padding: 60px 25px;
+    position: relative;
+}
+
+.side-content > h3:first-child {
+    position: absolute;
+    font-weight: 100;
+    top: 25px;
+    letter-spacing: 1px;
+}
+
+.announcement-container {
+    background: var(--primary-main);
+    padding: 35px 25px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement:not(.announcement:last-of-type) {
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-a);
+}
+
+.announcement:not(.announcement:first-of-type) {
+    margin-top: 20px;
+}
+
+p.anc-title {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: var(--secondary-light);
+}
+
+p.anc-details {
+    color: var(--text-grayish);
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
 
 footer {
     grid-column: 2;

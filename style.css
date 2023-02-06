@@ -165,7 +165,6 @@ aside {
     grid-row: 1 / 4;
     padding: 30px 20px 0 30px;
     background-color: var(--primary-bg-light);
-    z-index: 2;
 }
 
 .nav {
